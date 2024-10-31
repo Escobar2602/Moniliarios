@@ -228,7 +228,7 @@ import BaseLayout from "../layouts/Layout.astro";
 
 	function showNextSlide() {
 		slideIndex = (slideIndex % totalSlides) + 1;
-		document.getElementById('slide' + slideIndex).checked = true;
+		(document.getElementById('slide' + slideIndex) as HTMLInputElement).checked = true;
 	}
 
 	setInterval(showNextSlide, 2000); // Cambia cada 5 segundos
